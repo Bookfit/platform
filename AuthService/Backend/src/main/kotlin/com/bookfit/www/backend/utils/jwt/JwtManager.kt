@@ -13,7 +13,7 @@ import java.util.*
 
 @Service
 class JwtManager(
-    @Value("\${spring.security.oauth2.resourceserver.jwt.issuer-uri}") private val issuer: String,
+    @Value("\${jwt.issuer-uri}") private val issuer: String,
     @Value("\${jwt.key-id}") private val pbKey: String,
     private val keyPair: KeyPair
 ) {

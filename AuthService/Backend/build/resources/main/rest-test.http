@@ -1,8 +1,8 @@
 
 ###
-GET http://localhost:8080/api/test
+GET http://localhost:9010/test
 Accept: application/json
-Authorization: Bearer <token>
+Authorization: Bearer eyJraWQiOiJib29maXQta2V5LWlkIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiaHR0cHM6Ly93d3cuYm9va2ZpdC5jb20iLCJuaWNrbmFtZSI6InRlc3QyIiwiZXhwIjoxNzQ5MzA0MTgxLCJpYXQiOjE3NDkzMDMyODEsImVtYWlsIjoidGVzdDMifQ.lJFlQSswZMr-WqWLbakoj-tsekht-IW24zQdxLBrDIDKXLYJWPnLT9UwjtPe2w9JcESaQmCXgcL29pSrVrHlJT6gubPAP46sOw21VzdKs0lHZsJ6xWBTmLQBEUAkBDWnaJDTePhjnxtw29IMDlBnIskNOA5JkPtI-RPBe634Gdi22fP8p9hXgCmka4VQNbb7eTKgpZ-G62wyo88ot7IFxXQVtAY55mBXFwKyL92OzHn9sDCeUlb5cSPa9ibUva-1lya4tkaXQgueeBqIkB6Ab_yW8vWQzhPlvH8c5aTAtEgFSnCvlAauJHQGiNPztyU7LBuaEEzjPqgGKWsOfFfKmg
 
 <> 2025-06-05T021210.200.json
 <> 2025-06-05T015214.200.json
@@ -11,7 +11,7 @@ Authorization: Bearer <token>
 
 ###
 
-GET http://localhost:8080/.well-known/jwks.json
+GET http://localhost:9010/.well-known/jwks.json
 Accept: application/json
 
 <> 2025-06-07T051723.200.json
@@ -21,7 +21,7 @@ Accept: application/json
 
 ###
 
-POST http://localhost:8080/oauth/token
+POST http://localhost:9010/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 
@@ -39,11 +39,9 @@ email = test3
 
 ###
 
-POST http://localhost:8080/oauth/access-token
+POST http://localhost:9010/oauth/access-token
 Content-Type: application/json
 
 {
-  "userId": "test",
-  "nickname": "test2",
-  "email": "test3"
+  "refresh_token": "test"
 }

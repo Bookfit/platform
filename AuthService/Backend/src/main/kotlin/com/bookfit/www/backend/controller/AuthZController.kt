@@ -36,6 +36,9 @@ class AuthZController(
         return Mono.just(jwkSet.toJSONObject())
     }
 
+    /*
+    * TODO : 액세스, 리프레시 토큰 정보를 발급 받습니다.
+    * */
     @PostMapping(
         "/oauth/token",
         consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE],
@@ -59,6 +62,7 @@ class AuthZController(
         )
     }
 
+    /*TODO: 액세스 토큰 만료시 재발급을 받습니다.*/
     @PostMapping(
         "/oauth/access-token",
         consumes = [MediaType.APPLICATION_JSON_VALUE],
