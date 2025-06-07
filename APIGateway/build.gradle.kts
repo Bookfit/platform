@@ -43,6 +43,10 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
     implementation("com.nimbusds:nimbus-jose-jwt")
+
+    /*맥 서버 운용시 네이티브 라이브러리 사용*/
+    implementation("io.netty:netty-resolver-dns-native-macos:4.1.109.Final:osx-aarch_64") // ARM 맥(M1/M2)
+
 }
 
 dependencyManagement {

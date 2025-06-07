@@ -16,18 +16,14 @@ class GatewayRoutesConfig {
     @Bean
     fun customRouteLocator(builder: RouteLocatorBuilder): RouteLocator {
         return builder.routes()
-            .route(
-                "auth-service"
-            ) { r: PredicateSpec ->
-                r.path("/api/auth/**")
-                    .filters { f: GatewayFilterSpec -> f.stripPrefix(1) }
+            .route("auth-service") {
+                it.path("/api/oauth/**")
+                    .filters { f -> f.stripPrefix(1) }
                     .uri("http://localhost:9010")
             }
-            .route(
-                "test-service"
-            ) { r: PredicateSpec ->
-                r.path("/api/test/**")
-                    .filters { f: GatewayFilterSpec -> f.stripPrefix(1) }
+            .route("test-service") {
+                it.path("/api/test/**")
+                    .filters { f -> f.stripPrefix(1) }
                     .uri("http://localhost:9010")
             }
             .build()
