@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feb7c0de-b8e8-45d0-afbd-58cb525ccbbe" name="Changes" comment=":tada: API-GW 및 LOGIN 모듈 init">
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/src/main/kotlin/com/bookfit/www/backend/config/GatewayRoutesConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/src/main/kotlin/com/bookfit/www/backend/config/GatewayRoutesConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/src/main/kotlin/com/bookfit/www/backend/config/GatewaySecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/src/main/kotlin/com/bookfit/www/backend/config/GatewaySecurityConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
