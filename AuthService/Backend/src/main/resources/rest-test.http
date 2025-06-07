@@ -1,0 +1,47 @@
+
+###
+GET http://localhost:8080/api/test
+Accept: application/json
+Authorization: Bearer eyJraWQiOiJib29maXQta2V5LWlkIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiaHR0cHM6Ly93d3cuYm9va2ZpdC5jb20iLCJuaWNrbmFtZSI6InRlc3QyIiwiZXhwIjoxNzQ5MjQ1MTEzLCJpYXQiOjE3NDkyNDQyMTMsImVtYWlsIjoidGVzdDMifQ.AWkNi0ERJudrSG9C-4Nf8vS07y0hLEU53PUAWpOqakvN4DlBitBF4LgWYjDork4YPVeWzOmqnHJbPycIWXmsMAbmSVaMSbOedV533lN5JrqpMMjWWgMlkpHDh-sSfp-72ifU2pHJ6Ov-QFGZSYQ7OLhVXnShx5Gdr9_-GU6Eof0WjbusUKYaYUWrRnw1AeBi1anEYt92Nu-KN_bZc8Iwuxfe1tlaE_Wur6KHk1MUZqwWR6yAhnR0PqxE5vRberdsfQdyliWSjLbB8o_RDZMn7sMTvm3HapqQ8NFaIHc9_-2bWRs48lIePjR1PC_UMNidMIBQZZnlGwO_K1t6HNvmyw
+
+<> 2025-06-05T021210.200.json
+<> 2025-06-05T015214.200.json
+<> 2025-06-05T015128.200.json
+<> 2025-06-05T015121.200.json
+
+###
+
+GET http://localhost:8080/.well-known/jwks.json
+Accept: application/json
+
+<> 2025-06-07T051723.200.json
+<> 2025-06-07T035730.200.json
+<> 2025-06-07T035725.200.json
+<> 2025-06-07T035718.200.json
+
+###
+
+POST http://localhost:8080/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+
+userId = test &
+nickname = test2 &
+email = test3
+
+<> 2025-06-07T052052.200.json
+<> 2025-06-07T051833.415.json
+<> 2025-06-07T051806.415.json
+<> 2025-06-07T051803.415.json
+<> 2025-06-07T051746.415.json
+<> 2025-06-07T051711.415.json
+<> 2025-06-07T051444.415.json
+
+###
+
+POST http://localhost:8080/oauth/access-token
+Content-Type: application/json
+
+{
+  "refresh_token": "test"
+}

@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kid": "my-key-id",
+      "kty": "RSA",
+      "alg": "RS256",
+      "use": "sig",
+      "n": "...",
+      "e": "AQAB"
+    }
+  ]
+}

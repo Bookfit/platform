@@ -24,6 +24,12 @@ class GatewayRoutesConfig {
                     .uri("http://localhost:8080")
             }
             .route(
+                "jwks-service"
+            ) { r: PredicateSpec ->
+                r.path("/.well-known/jwks.json")
+                    .uri("http://localhost:8080")
+            }
+            .route(
                 "test-service"
             ) { r: PredicateSpec ->
                 r.path("/api/test/**")
