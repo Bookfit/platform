@@ -21,9 +21,18 @@ class GatewayRoutesConfig {
                     .filters { f -> f.stripPrefix(1) }
                     .uri("http://localhost:9010")
             }
+            .route("map-service") {
+                it.path("/api/map/**")
+                    .filters { f -> f.stripPrefix(1) }
+                    .uri("http://localhost:9010")
+            }
             .route("test-service") {
                 it.path("/api/test/**")
                     .filters { f -> f.stripPrefix(1) }
+                    .uri("http://localhost:9010")
+            }
+            .route("main-page") {
+                it.path("/")
                     .uri("http://localhost:9010")
             }
             .build()

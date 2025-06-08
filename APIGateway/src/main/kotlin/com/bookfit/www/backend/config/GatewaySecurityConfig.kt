@@ -26,9 +26,9 @@ class GatewaySecurityConfig(
             .authorizeExchange {
                 /*접근 허용 대역 설정*/
                 it.pathMatchers(
-                    "/api/oauth/token"/*토큰신규발급*/,
-                    "/api/oauth/access-token"/*액세스토큰 재발급*/,
-                    "/api/.well-known/jwks.json"/*서명정보,공개키*/
+                    "/api/oauth/**" /*인증/인가 관련*/,
+                    "/api/.well-known/jwks.json"/*서명정보,공개키*/,
+                    "/api/map/**"/*임시*/
                 ).permitAll()
                 it.anyExchange().authenticated()
             }.exceptionHandling {
