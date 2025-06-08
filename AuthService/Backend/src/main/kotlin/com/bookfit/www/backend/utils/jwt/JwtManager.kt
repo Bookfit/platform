@@ -6,10 +6,12 @@ import com.nimbusds.jose.JWSHeader
 import com.nimbusds.jose.crypto.RSASSASigner
 import com.nimbusds.jwt.JWTClaimsSet
 import com.nimbusds.jwt.SignedJWT
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import java.security.KeyPair
 import java.util.*
+import java.util.logging.Logger
 
 @Service
 class JwtManager(
@@ -17,7 +19,8 @@ class JwtManager(
     @Value("\${jwt.key-id}") private val pbKey: String,
     private val keyPair: KeyPair
 ) {
-    fun generateAccessToken(userId: String, nickname: String, email: String): Map<String, String> {
+    val log = LoggerFactory.getLogger(JwtManager::class.java)
+    fun generateAccessToken(userId: String, nickname: String, email: String, logintype: String): Map<String, String> {
         val now = Date()
         val expiresAt = Date(now.time + 1000 * 60 * 15) // 15분
 
@@ -28,6 +31,7 @@ class JwtManager(
             .expirationTime(expiresAt)
             .claim("nickname", nickname)
             .claim("email", email)
+            .claim("logintype", logintype)
             .build()
 
         val signer = RSASSASigner(keyPair.private)
@@ -39,14 +43,16 @@ class JwtManager(
         val signedJWT = SignedJWT(header, claims)
         signedJWT.sign(signer)
 
-        return mapOf(
+        val token = mapOf(
             "token_type" to "bearer",
             "token" to signedJWT.serialize(),
             "expires_in" to "${expiresAt.time / 1000}",
         )
+        log.info("generateAccessToken: {}", token)
+        return token
     }
 
-    fun generateRefreshToken(userId: String, nickname: String, email: String): Map<String, String> {
+    fun generateRefreshToken(userId: String, nickname: String, email: String, logintype: String): Map<String, String> {
         val now = Date()
         val expiresAt = Date(now.time + 1000L * 60 * 60 * 24 * 7) // 7일
 
@@ -57,6 +63,7 @@ class JwtManager(
             .expirationTime(expiresAt)
             .claim("nickname", nickname)
             .claim("email", email)
+            .claim("logintype", logintype)
             .build()
 
         val signer = RSASSASigner(keyPair.private)

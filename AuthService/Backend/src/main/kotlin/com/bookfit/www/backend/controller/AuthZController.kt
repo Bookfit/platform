@@ -1,25 +1,41 @@
 package com.bookfit.www.backend.controller
 
+import com.bookfit.www.backend.db.entity.Users
+import com.bookfit.www.backend.dto.KakaoUserDTO
 import com.bookfit.www.backend.dto.RequestToken
+import com.bookfit.www.backend.service.KakaoOAuthService
+import com.bookfit.www.backend.service.db.impl.UsersService
 import com.bookfit.www.backend.utils.jwt.JwtManager
 import com.nimbusds.jose.JWSAlgorithm
 import com.nimbusds.jose.jwk.JWKSet
 import com.nimbusds.jose.jwk.KeyUse
 import com.nimbusds.jose.jwk.RSAKey
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
+import org.springframework.http.ResponseCookie
 import org.springframework.http.ResponseEntity
+import org.springframework.http.server.reactive.ServerHttpResponse
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.server.ServerWebExchange
 import reactor.core.publisher.Mono
+import java.net.URI
 import java.security.KeyPair
 import java.security.interfaces.RSAPublicKey
+import java.time.Duration
+import java.time.OffsetDateTime
 
 @RestController
 class AuthZController(
     @Value("\${jwt.key-id}") private val pbKey: String,
     private val rsaKeyPair: KeyPair,
-    private val jwtManager: JwtManager
+    private val jwtManager: JwtManager,
+    private val kakaoOAuthService: KakaoOAuthService,
+    private val usersService: UsersService
 ) {
+    val log = LoggerFactory.getLogger(AuthZController::class.java)
 
     @GetMapping("/.well-known/jwks.json", produces = [MediaType.APPLICATION_JSON_VALUE])
     fun jwks(): Mono<Map<String, Any>> {
@@ -47,9 +63,19 @@ class AuthZController(
     fun tokenCreate(@ModelAttribute body: RequestToken): Mono<ResponseEntity<Map<String, Map<String, String>>>> {
 
         val accessToken: Map<String, String> =
-            jwtManager.generateAccessToken(userId = body.userId, nickname = body.nickname, email = body.email)
+            jwtManager.generateAccessToken(
+                userId = body.userId,
+                nickname = body.nickname,
+                email = body.email,
+                logintype = body.logintype
+            )
         val refreshToken: Map<String, String> =
-            jwtManager.generateRefreshToken(userId = body.userId, nickname = body.nickname, email = body.email)
+            jwtManager.generateRefreshToken(
+                userId = body.userId,
+                nickname = body.nickname,
+                email = body.email,
+                logintype = body.logintype
+            )
 
 
         return Mono.just(
@@ -71,7 +97,12 @@ class AuthZController(
     fun tokenAccess(@RequestBody body: RequestToken): Mono<ResponseEntity<Map<String, String>>> {
 
         val accessToken =
-            jwtManager.generateAccessToken(userId = body.userId, nickname = body.nickname, email = body.email)
+            jwtManager.generateAccessToken(
+                userId = body.userId,
+                nickname = body.nickname,
+                email = body.email,
+                logintype = body.logintype
+            )
         return Mono.just(
             ResponseEntity.ok(
                 mapOf(
@@ -79,5 +110,75 @@ class AuthZController(
                 )
             )
         )
+    }
+
+    @GetMapping("/oauth/kakao/callback")
+    fun kakaoCallback(
+        @RequestParam(required = false) params: Map<String, String>,
+        response: ServerHttpResponse
+    ): Mono<Void> {
+        val error = params["error"]
+        val code = params["code"]
+        if (!error.isNullOrBlank() || code.isNullOrBlank()) {
+            response.statusCode = HttpStatus.FOUND
+            response.headers.location = URI.create("/oauth/login")
+            return response.setComplete()
+        }
+
+        return kakaoOAuthService.processKakaoLogin(code!!)
+            .flatMap { kakaoUserDTO ->
+                // 토큰 생성
+                val accessToken = jwtManager.generateAccessToken(
+                    userId = kakaoUserDTO.id.toString(),
+                    nickname = kakaoUserDTO.kakao_account.profile!!.nickname.toString(),
+                    email = kakaoUserDTO.kakao_account.email!!,
+                    logintype = "kakao"
+                )
+
+                val refreshToken: Map<String, String> =
+                    jwtManager.generateRefreshToken(
+                        userId = kakaoUserDTO.id.toString(),
+                        nickname = kakaoUserDTO.kakao_account.profile!!.nickname.toString(),
+                        email = kakaoUserDTO.kakao_account.email!!,
+                        logintype = "kakao"
+                    )
+                usersService.saveUser(Users().apply {
+                    socialType="kakao"
+                    socialUniqueId = kakaoUserDTO.id.toString()
+                    email = kakaoUserDTO.kakao_account.email!!
+                    thumbnail = kakaoUserDTO.kakao_account.profile.thumbnail_image_url
+                    this.refreshToken=refreshToken["token"].toString()
+                    joinAt = OffsetDateTime.now()
+                    createdAt = OffsetDateTime.now()
+                })
+
+                // 쿠키 세팅
+                val cookie = ResponseCookie.from("access-token", accessToken["token"] ?: "")
+                    .httpOnly(true)
+                    .secure(false)  // 운영 환경에선 true
+                    .path("/")
+                    .maxAge(Duration.ofSeconds(accessToken["expires_in"]!!.toLong()))
+                    .sameSite("Lax")
+                    .build()
+
+                response.addCookie(cookie)
+                response.statusCode = HttpStatus.FOUND
+                response.headers.location = URI.create("http://localhost:9000/api/map") /*메인으로 리다이렉트*/
+
+                response.setComplete()
+            }
+            .onErrorResume {
+                log.error("error occurred", it)
+                // 에러 시 로그인 페이지로
+                response.addCookie(
+                    ResponseCookie.from("error", "login_failed")
+                        .path("/")
+                        .maxAge(Duration.ofMinutes(1))
+                        .build()
+                )
+                response.statusCode = HttpStatus.FOUND
+                response.headers.location = URI.create("/api/oauth/login")
+                response.setComplete()
+            }
     }
 }

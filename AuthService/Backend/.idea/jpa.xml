@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig">
+    <option name="reLastEntityCreationPackage" value="src/main/kotlin/com/bookfit/www/backend/db/entity" />
+    <option name="reverseEngineeringLastDbConnectionId" value="99955dde-1f88-4cd6-a6b6-0560da0ab14f" />
+  </component>
+</project>
