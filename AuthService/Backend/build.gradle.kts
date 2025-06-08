@@ -49,6 +49,14 @@ dependencies {
     /*맥 서버 운용시 네이티브 라이브러리 사용*/
     implementation("io.netty:netty-resolver-dns-native-macos:4.1.109.Final:osx-aarch_64") // ARM 맥(M1/M2)
 
+    /*로그인 페이지 운용*/
+    implementation("org.thymeleaf:thymeleaf-spring6") // thymeleaf 템플릿 엔진 (필요 시)
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
+
+    /*db*/
+    implementation("org.postgresql:postgresql:42.6.0")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 dependencyManagement {

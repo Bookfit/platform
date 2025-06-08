@@ -23,11 +23,23 @@ class OAuthSecurityConfig(
         return http
             .csrf { it.disable() }
             .authorizeExchange {
-                it.pathMatchers("/oauth/token", "/.well-known/jwks.json", "/oauth/access-token").permitAll()
+                it.pathMatchers(
+                    "/images/**",
+                    "/css/**",
+                    "/js/**",
+                    "/oauth/**",
+                    "/.well-known/jwks.json",
+                    "/map" /*임시*/
+                ).permitAll()
                 it.anyExchange().authenticated()
             }
             .oauth2ResourceServer {
                 it.jwt { jwtSpec -> jwtSpec.jwtDecoder(jwtDecoder()) }
+            }
+            .formLogin { form ->
+                form
+                    .loginPage("/login")  // 커스텀 로그인 페이지 경로 지정
+                    .disable()            // formLogin 기본 로그인 폼 비활성화 (아래 버튼만 사용)
             }
             .build()
     }
