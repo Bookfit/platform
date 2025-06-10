@@ -16,6 +16,11 @@ public class SampleService {
     private final SampleRepository sampleRepository;
     private final GeometryFactory geometryFactory = new GeometryFactory(); // 공간 객체 생성용
 
+
+    public List<Sample> findNearestWithDistance(double lng, double lat, double range) {
+        return sampleRepository.findNearestSamplesOptimized2(lng, lat, range);
+    }
+
     public List<Sample> findNearest(double lng, double lat) {
         return sampleRepository.findNearestSamples(lng, lat);
     }

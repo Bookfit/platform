@@ -19,6 +19,21 @@ public class SampleController {
 
     private final SampleService sampleService;
 
+    @GetMapping("/near-range")
+    @Operation(summary = "반경 조회", description = "주어진 위도/경도와 범위를 입력하고 반경내 Poi 를 반환합니다.")
+    public List<SampleResponse> findNearestSamplesOptimized(
+            @Parameter(description = "경도 (Longitude)", example = "126.9780")
+            @RequestParam double lng,
+            @Parameter(description = "위도 (Latitude)", example = "37.5665")
+            @RequestParam double lat,
+            @Parameter(description = "반경 (range)", example = "1000.0")
+            @RequestParam double range
+    ) {
+        return sampleService.findNearestWithDistance(lng, lat, range).stream()
+                .map(SampleResponse::new)
+                .toList();
+    }
+
     @GetMapping("/near")
     @Operation(summary = "가까운 좌표 조회", description = "주어진 위도/경도에서 가까운 좌표를 반환합니다.")
     public List<SampleResponse> findNearestSamples(
