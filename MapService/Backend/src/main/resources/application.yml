@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://kimbaro.iptime.org:5432/bookfit
+    username: bookfit
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+#      ddl-auto: update
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
