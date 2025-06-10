@@ -77,7 +77,6 @@ class AuthZController(
                 logintype = body.logintype
             )
 
-
         return Mono.just(
             ResponseEntity.ok(
                 mapOf(
@@ -95,6 +94,9 @@ class AuthZController(
         produces = [MediaType.APPLICATION_JSON_VALUE]
     )
     fun tokenAccess(@RequestBody body: RequestToken): Mono<ResponseEntity<Map<String, String>>> {
+
+        /*Refresh 토큰 검증 개발 필요*/
+
 
         val accessToken =
             jwtManager.generateAccessToken(
@@ -143,25 +145,37 @@ class AuthZController(
                         logintype = "kakao"
                     )
                 usersService.saveUser(Users().apply {
-                    socialType="kakao"
+                    socialType = "kakao"
                     socialUniqueId = kakaoUserDTO.id.toString()
                     email = kakaoUserDTO.kakao_account.email!!
                     thumbnail = kakaoUserDTO.kakao_account.profile.thumbnail_image_url
-                    this.refreshToken=refreshToken["token"].toString()
+                    this.refreshToken = refreshToken["token"].toString()
                     joinAt = OffsetDateTime.now()
                     createdAt = OffsetDateTime.now()
                 })
 
                 // 쿠키 세팅
-                val cookie = ResponseCookie.from("access-token", accessToken["token"] ?: "")
-                    .httpOnly(true)
-                    .secure(false)  // 운영 환경에선 true
+                val accessTokenCookie = ResponseCookie
+                    .from("access-token", accessToken["token"] ?: "")
+                    .httpOnly(false)
+                    .secure(false) // 운영환경에서는 true
                     .path("/")
                     .maxAge(Duration.ofSeconds(accessToken["expires_in"]!!.toLong()))
                     .sameSite("Lax")
                     .build()
 
-                response.addCookie(cookie)
+                val refreshTokenCookie = ResponseCookie
+                    .from("refresh-token", refreshToken["token"] ?: "")
+                    .httpOnly(true)
+                    .secure(false) // 운영환경에서는 true
+                    .path("/")
+                    .maxAge(Duration.ofSeconds(refreshToken["expires_in"]!!.toLong()))
+                    .sameSite("Strict") // CSRF를 더 강하게 방지하기 위해 Strict 추천
+                    .build()
+
+                response.addCookie(accessTokenCookie)
+                response.addCookie(refreshTokenCookie)
+
                 response.statusCode = HttpStatus.FOUND
                 response.headers.location = URI.create("http://localhost:9000/api/map") /*메인으로 리다이렉트*/
 

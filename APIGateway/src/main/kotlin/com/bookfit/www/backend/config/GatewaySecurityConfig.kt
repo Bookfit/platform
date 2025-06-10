@@ -49,7 +49,6 @@ class GatewaySecurityConfig(
     fun jwtDecoder(): ReactiveJwtDecoder {
         println("-----> $jwkSetUri")
         val delegate = NimbusReactiveJwtDecoder.withJwkSetUri("$jwkSetUri").build()
-
         return ReactiveJwtDecoder { token ->
             delegate.decode(token).doOnNext { jwt ->
                 println("JWT kid: ${jwt.headers["kid"]}")
