@@ -1,5 +1,6 @@
 package com.bookfit.www.backend.controller
 
+import com.bookfit.www.backend.config.OAuthSecurityConfig
 import com.bookfit.www.backend.db.entity.Users
 import com.bookfit.www.backend.dto.KakaoUserDTO
 import com.bookfit.www.backend.dto.RequestToken
@@ -23,6 +24,7 @@ import org.springframework.web.server.ServerWebExchange
 import reactor.core.publisher.Mono
 import java.net.URI
 import java.security.KeyPair
+import java.security.interfaces.RSAPrivateKey
 import java.security.interfaces.RSAPublicKey
 import java.time.Duration
 import java.time.OffsetDateTime
@@ -33,15 +35,26 @@ class AuthZController(
     private val rsaKeyPair: KeyPair,
     private val jwtManager: JwtManager,
     private val kakaoOAuthService: KakaoOAuthService,
-    private val usersService: UsersService
+    private val usersService: UsersService,
+    private val oAuthSecurityConfig: OAuthSecurityConfig
 ) {
     val log = LoggerFactory.getLogger(AuthZController::class.java)
 
     @GetMapping("/.well-known/jwks.json", produces = [MediaType.APPLICATION_JSON_VALUE])
     fun jwks(): Mono<Map<String, Any>> {
-        val publicKey = rsaKeyPair.public as RSAPublicKey
+//        val publicKey = rsaKeyPair.public as RSAPublicKey
 
-        val jwk = RSAKey.Builder(publicKey)
+//        val publicKey =
+//            jwtManager.loadPublicKeyFromPEMResource("src/main/resources/APP/sms/src_temp/GIPHTTP/keys/public.pem")
+//        val privateKey =
+//            jwtManager.loadPrivateKeyFromPEMResource("src/main/resources/APP/sms/src_temp/GIPHTTP/keys/private.pem")
+
+        val publicKey2 = oAuthSecurityConfig.jwtPublicKey() as RSAPublicKey;
+        val privateKey2 = oAuthSecurityConfig.jwtPrivateKey() as RSAPrivateKey;
+
+
+        val jwk = RSAKey.Builder(publicKey2)
+            .privateKey(privateKey2)
             .keyUse(KeyUse.SIGNATURE)
             .algorithm(JWSAlgorithm.RS256)
             .keyID(pbKey) // Public Key
