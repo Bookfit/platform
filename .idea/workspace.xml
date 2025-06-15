@@ -5,31 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feb7c0de-b8e8-45d0-afbd-58cb525ccbbe" name="Changes" comment=":tada: API-GW 및 LOGIN 모듈 init">
-      <change afterPath="$PROJECT_DIR$/MapService/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapService/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapService/.idea/modules/backend.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/.gradle/8.14/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/classes/java/main/com/bookfit/www/sample/Sample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/classes/java/main/com/bookfit/www/sample/SampleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/classes/java/main/com/bookfit/www/sample/SampleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/classes/java/main/com/bookfit/www/sample/SampleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/classes/java/main/com/bookfit/www/sample/dto/SampleResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/db/entity/TestEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/db/repo/TestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/db/repo/TestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/dto/TestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/dto/TestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/SampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/SampleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/controller/SampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/db/entity/SampleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/db/entity/SampleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/db/repo/SampleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/db/repo/SampleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/dto/SampleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/dto/SampleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/map/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

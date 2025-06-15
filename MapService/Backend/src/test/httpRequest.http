@@ -1,0 +1,3 @@
+### GET request with a header
+GET http://localhost:9020/map/main
+Accept: application/json
