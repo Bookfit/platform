@@ -20,7 +20,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('users_id_seq')")
     @Column(name = "user_id", nullable = false)
-    private Integer id;
+    private Integer userId;
 
     @Size(max = 50)
     @NotNull
