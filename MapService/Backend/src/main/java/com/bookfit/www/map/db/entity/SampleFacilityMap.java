@@ -11,6 +11,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Entity
 @Table(name = "sample_facility_map")
 public class SampleFacilityMap {
+    @SequenceGenerator(name = "sample_facility_map_id_gen", sequenceName = "sample_facility_id_seq", allocationSize = 1)
     @EmbeddedId
     private SampleFacilityMapId id;
 

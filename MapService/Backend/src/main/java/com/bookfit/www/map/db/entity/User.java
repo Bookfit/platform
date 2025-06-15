@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.OffsetDateTime;
@@ -14,11 +13,10 @@ import java.time.OffsetDateTime;
 @Setter
 @Entity
 @Table(name = "\"user\"")
-@ToString
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ColumnDefault("nextval('users_id_seq')")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_gen")
+    @SequenceGenerator(name = "user_id_gen", sequenceName = "users_id_seq", allocationSize = 1)
     @Column(name = "user_id", nullable = false)
     private Integer id;
 
