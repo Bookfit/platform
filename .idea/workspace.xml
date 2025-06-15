@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="feb7c0de-b8e8-45d0-afbd-58cb525ccbbe" name="Changes" comment=":tada: API-GW 및 LOGIN 모듈 init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/Backend/build/resources/main/rest-test.http" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Backend/build/resources/main/rest-test.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/Sample.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/db/entity/SampleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/controller/SampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/SampleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/db/repo/SampleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/SampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/SampleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/dto/SampleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapService/Backend/src/main/java/com/bookfit/www/sample/dto/SampleResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
