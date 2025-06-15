@@ -1,3 +1,32 @@
 ### GET request with a header
 GET http://localhost:9020/map/main
 Accept: application/json
+
+###
+POST http://localhost:9020/map/main
+Content-Type: application/json
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}

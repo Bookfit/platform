@@ -14,5 +14,5 @@ import java.util.List;
 public class MapListStatusSummaryVO {
     private int totalCount;
     private int pendingCount;
-    private List<CategoryVO> categories;
+    private List<MapCategoryVO> categories;
 }
