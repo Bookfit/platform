@@ -46,6 +46,15 @@ public class Sample {
     @Column(name = "weekend_hours", length = 50)
     private String weekendHours;
 
+    @Column(name = "address", columnDefinition = "TEXT")
+    private String address;
+
+    @Column(name = "detailaddress", columnDefinition = "TEXT")
+    private String detailaddress;
+
+
+
+
 /*
  TODO [Reverse Engineering] create field to map the 'location' column
  Available actions: Define target Java type | Uncomment as is | Remove column mapping
