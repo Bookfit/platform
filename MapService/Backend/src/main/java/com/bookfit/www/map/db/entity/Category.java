@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -28,4 +30,6 @@ public class Category {
     @Column(name = "code", nullable = false, length = 50)
     private String code;
 
+    @ManyToMany(mappedBy = "categories")
+    private List<Sample> samples;
 }

@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -27,4 +29,6 @@ public class SampleFacility {
     @Column(name = "code", nullable = false, length = 50)
     private String code;
 
+    @ManyToMany(mappedBy = "facilities")
+    private List<Sample> samples;
 }

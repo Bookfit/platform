@@ -8,6 +8,9 @@ import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.locationtech.jts.geom.Point;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -49,16 +52,27 @@ public class Sample {
     @Column(name = "address", columnDefinition = "TEXT")
     private String address;
 
-    @Column(name = "detailaddress", columnDefinition = "TEXT")
-    private String detailaddress;
+    @Column(name = "detailAddress", columnDefinition = "TEXT")
+    private String detailAddress;
+
+    @Column(name = "location", columnDefinition = "geometry(Point, 4326)")
+    private Point location;
+
+    @ManyToMany
+    @JoinTable(
+            name = "sample_category_map",
+            joinColumns = @JoinColumn(name = "sample_id"),          // 현재 엔티티의 컬럼
+            inverseJoinColumns = @JoinColumn(name = "category_id")  // 상대 엔티티의 컬럼
+    )
+    private List<Category> categories;
 
 
+    @ManyToMany
+    @JoinTable(
+            name = "sample_facility_map",
+            joinColumns = @JoinColumn(name = "sample_id"),
+            inverseJoinColumns = @JoinColumn(name = "sample_facility_id")
+    )
+    private List<SampleFacility> facilities;
 
-
-/*
- TODO [Reverse Engineering] create field to map the 'location' column
- Available actions: Define target Java type | Uncomment as is | Remove column mapping
-    @Column(name = "location", columnDefinition = "geometry")
-    private Object location;
-*/
 }
