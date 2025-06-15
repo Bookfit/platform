@@ -1,23 +1,24 @@
-package com.bookfit.www.sample;
+package com.bookfit.www.sample.db.repo;
 
+import com.bookfit.www.sample.db.entity.SampleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface SampleRepository extends JpaRepository<Sample, Long> {
+public interface SampleRepository extends JpaRepository<SampleEntity, Long> {
 
     @Query(value = """
             SELECT s.*, ST_Distance(
                 s.location,
                 ST_SetSRID(ST_MakePoint(:lng, :lat), 4326)
             ) AS distance
-            FROM sample s
+            FROM sampleEntity s
             ORDER BY distance ASC
             LIMIT 10
             """, nativeQuery = true)
-    List<Sample> findNearestSamples(@Param("lng") double lng, @Param("lat") double lat);
+    List<SampleEntity> findNearestSamples(@Param("lng") double lng, @Param("lat") double lat);
 
     @Query(value = """
             SELECT 
@@ -29,7 +30,7 @@ public interface SampleRepository extends JpaRepository<Sample, Long> {
                     s.location,
                     ST_SetSRID(ST_MakePoint(:lng, :lat), 4326)
                 ) as distance
-            FROM sample s
+            FROM sampleEntity s
             ORDER BY s.location <-> ST_SetSRID(ST_MakePoint(:lng, :lat), 4326)
             LIMIT 1
             """, nativeQuery = true)
@@ -41,7 +42,7 @@ public interface SampleRepository extends JpaRepository<Sample, Long> {
                  s.location::geography,
                  ST_SetSRID(ST_MakePoint(:lng, :lat), 4326)::geography
              ) AS distance_meters
-             FROM sample s
+             FROM sampleEntity s
              WHERE ST_DWithin(
                  s.location::geography,
                  ST_SetSRID(ST_MakePoint(:lng, :lat), 4326)::geography,
@@ -49,5 +50,5 @@ public interface SampleRepository extends JpaRepository<Sample, Long> {
              )
              ORDER BY distance_meters ASC;
             """, nativeQuery = true)
-    List<Sample> findNearestSamplesOptimized2(@Param("lng") double lng, @Param("lat") double lat, @Param("radiusMeters") double radiusMeters);
+    List<SampleEntity> findNearestSamplesOptimized2(@Param("lng") double lng, @Param("lat") double lat, @Param("radiusMeters") double radiusMeters);
 }

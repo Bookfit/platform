@@ -1,6 +1,6 @@
 package com.bookfit.www.sample.dto;
 
-import com.bookfit.www.sample.Sample;
+import com.bookfit.www.sample.db.entity.SampleEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -20,10 +20,10 @@ public class SampleResponse {
     @Schema(description = "경도", example = "126.9706")
     private double longitude;
 
-    public SampleResponse(Sample sample) {
-        this.id = sample.getId();
-        this.name = sample.getName();
-        this.latitude = sample.getLocation().getY(); // 위도
-        this.longitude = sample.getLocation().getX(); // 경도
+    public SampleResponse(SampleEntity sampleEntity) {
+        this.id = sampleEntity.getId();
+        this.name = sampleEntity.getName();
+        this.latitude = sampleEntity.getLocation().getY(); // 위도
+        this.longitude = sampleEntity.getLocation().getX(); // 경도
     }
 }

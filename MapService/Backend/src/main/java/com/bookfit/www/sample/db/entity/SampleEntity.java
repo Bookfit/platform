@@ -1,4 +1,4 @@
-package com.bookfit.www.sample;
+package com.bookfit.www.sample.db.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @Entity
 @Data
 @Schema(description = "샘플 엔티티 - 이름과 위치(좌표)를 저장합니다.")
-public class Sample {
+public class SampleEntity {
 
     @Id
     @GeneratedValue

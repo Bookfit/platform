@@ -1,5 +1,7 @@
-package com.bookfit.www.sample;
+package com.bookfit.www.sample.controller;
 
+import com.bookfit.www.sample.SampleService;
+import com.bookfit.www.sample.db.entity.SampleEntity;
 import com.bookfit.www.sample.dto.SampleCreateRequest;
 import com.bookfit.www.sample.dto.SampleResponse;
 import com.bookfit.www.sample.dto.SampleWithDistanceResponse;
@@ -50,7 +52,7 @@ public class SampleController {
 
     @Operation(summary = "좌표 저장", description = "이름과 위도/경도를 입력받아 샘플 좌표를 저장합니다.")
     @PostMapping
-    public Sample createSample(@RequestBody SampleCreateRequest request) {
+    public SampleEntity createSample(@RequestBody SampleCreateRequest request) {
         return sampleService.saveSample(request);
     }
 
