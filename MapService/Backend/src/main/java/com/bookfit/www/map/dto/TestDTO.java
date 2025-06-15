@@ -2,7 +2,8 @@ package com.bookfit.www.map.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import lombok.Data;
 
-@Entity
-public class TestEntity {
+@Data
+public class TestDTO {
 }
