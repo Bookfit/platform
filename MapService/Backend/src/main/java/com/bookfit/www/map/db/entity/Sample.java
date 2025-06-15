@@ -17,7 +17,7 @@ public class Sample {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sample_id", nullable = false)
-    private Long id;
+    private Integer sampleId;
 
     @Size(max = 255)
     @NotNull
