@@ -2,7 +2,6 @@ package com.bookfit.www.map.controller;
 
 import com.bookfit.www.map.dto.search.GetSearchSampleRequestDTO;
 import com.bookfit.www.map.dto.search.GetSearchSampleResponseDTO;
-import com.bookfit.www.map.dto.search.GetSearchSampleResquestDTO;
 import com.bookfit.www.map.dto.search.PatchSearchRequestDTO;
 import com.bookfit.www.map.service.search.SearchService;
 import io.swagger.v3.oas.annotations.tags.Tag;

@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class FacilitiesDTO {
+public class CategoryVO {
     private String code;
     private String name;
 }

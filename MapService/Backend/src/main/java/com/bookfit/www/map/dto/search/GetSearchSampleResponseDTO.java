@@ -22,6 +22,6 @@ public class GetSearchSampleResponseDTO {
     private String description;
     private String status;
 
-    private List<CategoryDTO> categories;
-    private List<FacilitiesDTO> facilities;
+    private List<CategoryVO> categories;
+    private List<FacilitiesVO> facilities;
 }

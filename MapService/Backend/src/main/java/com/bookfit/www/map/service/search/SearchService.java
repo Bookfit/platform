@@ -1,14 +1,10 @@
 package com.bookfit.www.map.service.search;
 
-import com.bookfit.www.map.db.entity.QSample;
-import com.bookfit.www.map.db.entity.QUser;
 import com.bookfit.www.map.db.entity.Sample;
 import com.bookfit.www.map.db.repo.SampleRepository;
 import com.bookfit.www.map.dto.search.*;
-import com.querydsl.jpa.impl.JPAQuery;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -48,11 +44,11 @@ public class SearchService {
         dto.setStatus(s.getStatus());
 
         dto.setCategories(s.getCategories().stream()
-                .map(c -> new CategoryDTO(c.getCode(), c.getName()))
+                .map(c -> new CategoryVO(c.getCode(), c.getName()))
                 .collect(Collectors.toList()));
 
         dto.setFacilities(s.getFacilities().stream()
-                .map(f -> new FacilitiesDTO(f.getCode(), f.getName()))
+                .map(f -> new FacilitiesVO(f.getCode(), f.getName()))
                 .collect(Collectors.toList()));
 
         return dto;
