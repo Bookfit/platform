@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/map/search")
-@Tag(name = "SearchController", description = "등록공간")
+@Tag(name = "/map/search", description = "등록공간")
 public class SearchController {
     private final SearchService searchService;
 
