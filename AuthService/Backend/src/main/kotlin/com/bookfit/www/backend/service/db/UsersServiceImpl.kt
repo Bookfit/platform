@@ -1,6 +1,6 @@
 package com.bookfit.www.backend.service.db
 
-import com.bookfit.www.backend.db.entity.Users
+import com.bookfit.www.backend.db.entity.User
 import com.bookfit.www.backend.db.repo.UsersRepository
 import com.bookfit.www.backend.service.db.impl.UsersService
 import jakarta.transaction.Transactional
@@ -13,13 +13,13 @@ import java.time.ZoneId
 class UsersServiceImpl(
     private val usersRepository: UsersRepository
 ) : UsersService {
-    override fun findByUser(socialType: String, socialId: String): Users? {
+    override fun findByUser(socialType: String, socialId: String): User? {
         return usersRepository.findByUsers(socialType, socialId)
     }
 
     @Transactional
-    override fun saveUser(user: Users): Users {
-        var searchUser: Users? = findByUser(socialType = user.socialType!!, socialId = user.socialUniqueId!!)
+    override fun saveUser(user: User): User {
+        var searchUser: User? = findByUser(socialType = user.socialType!!, socialId = user.socialUniqueId!!)
 
         val userToSave = if (searchUser != null) {
             // 기존 값 갱신

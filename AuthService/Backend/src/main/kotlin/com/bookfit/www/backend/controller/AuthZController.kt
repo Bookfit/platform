@@ -1,7 +1,7 @@
 package com.bookfit.www.backend.controller
 
 import com.bookfit.www.backend.config.OAuthSecurityConfig
-import com.bookfit.www.backend.db.entity.Users
+import com.bookfit.www.backend.db.entity.User
 import com.bookfit.www.backend.dto.KakaoUserDTO
 import com.bookfit.www.backend.dto.RequestToken
 import com.bookfit.www.backend.service.KakaoOAuthService
@@ -157,7 +157,7 @@ class AuthZController(
                         email = kakaoUserDTO.kakao_account.email!!,
                         logintype = "kakao"
                     )
-                usersService.saveUser(Users().apply {
+                usersService.saveUser(User().apply {
                     socialType = "kakao"
                     socialUniqueId = kakaoUserDTO.id.toString()
                     email = kakaoUserDTO.kakao_account.email!!
@@ -165,6 +165,7 @@ class AuthZController(
                     this.refreshToken = refreshToken["token"].toString()
                     joinAt = OffsetDateTime.now()
                     createdAt = OffsetDateTime.now()
+                    updatedAt = OffsetDateTime.now()
                 })
 
                 // 쿠키 세팅

@@ -1,6 +1,5 @@
 package com.bookfit.www.backend.controller
 
-import com.bookfit.www.backend.db.entity.Users
 import com.bookfit.www.backend.service.db.impl.UsersService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
