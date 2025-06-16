@@ -1,13 +1,16 @@
 package com.bookfit.www.map.dto.details;
 
+import com.bookfit.www.map.dto.main.MapCategoryVO;
 import com.bookfit.www.map.dto.search.CategoryVO;
 import com.bookfit.www.map.dto.search.FacilitiesVO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
 @Data
+@ToString
 public class PostDetailsRequestDTO {
 
     @Schema(description = "사용자 ID", example = "737833749")
@@ -20,7 +23,7 @@ public class PostDetailsRequestDTO {
     private String name;
 
     @Schema(description = "카테고리 목록", example = "[{\"code\":\"STUDYROOM\",\"name\":\"스터디룸\"}]")
-    private List<CategoryVO> categories;
+    private List<MapCategoryVO> categories;
 
     @Schema(description = "주소", example = "서울 동작구 동작대로 129")
     private String address;
@@ -41,7 +44,7 @@ public class PostDetailsRequestDTO {
     private String weekendHours;
 
     @Schema(description = "시설 목록", example = "[{\"code\":\"PARKING\",\"name\":\"주차\"}]")
-    private List<FacilitiesVO> facilities;
+    private List<FacilitiesCategoryVO> facilities;
 
     @Schema(description = "설명", example = "책과 커피를 함께 즐길 수 있는 조용한 공간입니다.")
     private String description;

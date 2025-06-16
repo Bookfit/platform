@@ -1,3 +1,61 @@
+
+### GET request with a header
+GET http://localhost:9020/map/details/meta
+Accept: application/json
+
+###
+POST http://localhost:9020/map/details
+Content-Type: application/json
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ],
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
 ### GET request with a header
 GET http://localhost:9020/map/main
 Accept: application/json
