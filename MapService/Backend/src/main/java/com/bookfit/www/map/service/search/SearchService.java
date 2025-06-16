@@ -7,6 +7,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 public class SearchService {
     private final SampleRepository sampleRepository;
 
+    @Transactional(readOnly = true)
     public List<GetSearchSampleResponseDTO> searchSamples(Pageable pageable) {
         if (pageable == null) {
             return sampleRepository.findAll().stream()
@@ -27,6 +29,7 @@ public class SearchService {
                     .toList();
         }
     }
+
 
     private GetSearchSampleResponseDTO convertToDto(Sample s) {
         GetSearchSampleResponseDTO dto = new GetSearchSampleResponseDTO();

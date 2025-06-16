@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,11 +30,13 @@ public class MainServiceImpl implements MapService {
     private final CategoryRepository categoryRepository;
 
     @Override
+    @Transactional(readOnly = true)
     public List<MapListStatusCountVO> getStatusCount() {
         return sampleRepository.getStatusCount();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public ResponseEntity<Object> getBffMain() {
 
         categoryRepository.findAllMappedCategoryVO().stream().map(categoryVO -> {

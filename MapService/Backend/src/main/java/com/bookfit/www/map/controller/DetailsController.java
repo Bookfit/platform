@@ -1,5 +1,10 @@
 package com.bookfit.www.map.controller;
 
+import com.bookfit.www.map.db.entity.Sample;
+import com.bookfit.www.map.db.entity.User;
+import com.bookfit.www.map.db.repo.CategoryRepository;
+import com.bookfit.www.map.db.repo.SampleRepository;
+import com.bookfit.www.map.db.repo.UserRepository;
 import com.bookfit.www.map.dto.details.GetDetailsResponseDTO;
 import com.bookfit.www.map.dto.details.PostDetailsRequestDTO;
 import com.bookfit.www.map.dto.search.GetSearchSampleRequestDTO;
@@ -12,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,16 +34,17 @@ public class DetailsController {
 
     private final DetailsService detailsService;
 
-    @GetMapping("")
+    @GetMapping()
     public ResponseEntity<GetDetailsResponseDTO> getDetails() {
 
         return ResponseEntity.ok(detailsService.getAllCategoriesAndFacilities());
     }
 
     @PostMapping()
-    public ResponseEntity<PostDetailsRequestDTO> saveDetails(@RequestBody PostDetailsRequestDTO request) {
+    public ResponseEntity<Object> saveDetails(@RequestBody PostDetailsRequestDTO request) {
+        return detailsService.saveDetails(request);
 
-        return ResponseEntity.ok(request);
+//        return ResponseEntity.ok(request);
     }
 
     @GetMapping("/meta")
