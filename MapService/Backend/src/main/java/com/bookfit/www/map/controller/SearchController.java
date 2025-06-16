@@ -6,6 +6,7 @@ import com.bookfit.www.map.dto.search.GetSearchSampleResquestDTO;
 import com.bookfit.www.map.dto.search.PatchSearchRequestDTO;
 import com.bookfit.www.map.service.search.SearchService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -36,7 +37,7 @@ public class SearchController {
     }
 
     @PatchMapping("")
-    public ResponseEntity<Void> updateStatus(@RequestBody PatchSearchRequestDTO request) {
+    public ResponseEntity<Void> updateStatus(@RequestBody @Valid PatchSearchRequestDTO request) {
         searchService.updateStatus(request);
         return ResponseEntity.ok().build(); // HTTP 200 OK
     }

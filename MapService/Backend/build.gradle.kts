@@ -38,6 +38,7 @@ dependencies {
 	implementation("org.hibernate:hibernate-spatial:6.4.4.Final")
 	implementation("org.locationtech.jts:jts-core:1.18.2")
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 
 	implementation("com.querydsl:querydsl-jpa:$querydslVersion:jakarta")
 	annotationProcessor("com.querydsl:querydsl-apt:$querydslVersion:jakarta")
