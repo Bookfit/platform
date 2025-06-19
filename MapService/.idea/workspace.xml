@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="963c1a03-0ae9-4f87-9d89-3ee4606b6e17" name="Changes" comment=":zap: 상세등록정보 페이지 저장 기능 추가">
+      <change beforePath="$PROJECT_DIR$/../APIGateway/src/main/kotlin/com/bookfit/www/backend/config/GatewayRoutesConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../APIGateway/src/main/kotlin/com/bookfit/www/backend/config/routes/DefaultRoutesConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIGateway/src/main/kotlin/com/bookfit/www/backend/config/GatewaySecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../APIGateway/src/main/kotlin/com/bookfit/www/backend/config/GatewaySecurityConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/8.14/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/AuthZController$kakaoCallback$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/AuthZController$kakaoCallback$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/AuthZController$kakaoCallback$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/AuthZController$kakaoCallback$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/AuthZController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/AuthZController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/db/entity/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/db/repo/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/db/repo/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/service/db/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/service/db/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/service/db/impl/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/classes/kotlin/main/com/bookfit/www/backend/service/db/impl/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/kotlin/compileKotlin/local-state/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/build/resources/main/templates/oauth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/build/resources/main/templates/oauth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/src/main/kotlin/com/bookfit/www/backend/controller/AuthZController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/src/main/kotlin/com/bookfit/www/backend/controller/AuthZController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/Backend/src/main/resources/templates/oauth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/Backend/src/main/resources/templates/oauth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/test/httpRequest.http" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/test/httpRequest.http" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Backend">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/Backend">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="map-service/develop-kdy" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2yJtL9XfXwhEyzyoBbWR0Wo36GP" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Backend [bootJar].executor": "Run",
+    "Gradle.Backend [build].executor": "Run",
+    "Gradle.Backend [clean build].executor": "Run",
+    "Gradle.Backend [clean].executor": "Run",
+    "Gradle.Build Backend.executor": "Run",
+    "HTTP Request.httpRequest | #1.executor": "Run",
+    "HTTP Request.httpRequest | #2.executor": "Run",
+    "HTTP Request.httpRequest | #3.executor": "Run",
+    "HTTP Request.httpRequest | GET request with a header#1.executor": "Run",
+    "HTTP Request.httpRequest | GET request with a header.executor": "Run",
+    "JUnit.Whole project.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BackendApplication (1).executor": "Run",
+    "Spring Boot.BackendApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/dongyeonkim/Documents/projects/platform/MapService/Backend/src/main/java/com/bookfit/www/map/service/sample",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Backend/src/main/java/com/bookfit/www/map/service/sample" />
+      <recent name="$PROJECT_DIR$/Backend/src/main/java/com/bookfit/www/map/controller" />
+      <recent name="$PROJECT_DIR$/Backend/src/main/java/com/bookfit/www/map" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bookfit.www.map.dto.details" />
+      <recent name="com.bookfit.www.map.dto.main" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="./gradlew clean build" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BackendApplication (1)">
+    <configuration name="Backend [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Backend" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Backend [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Backend" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="httpRequest | GET request with a header#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Backend/src/test/httpRequest.http" executionIdentifier="GET request with a header#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="httpRequest | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Backend/src/test/httpRequest.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="httpRequest | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Backend/src/test/httpRequest.http" executionIdentifier="#3" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="BackendApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="test" />
+      <module name="backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bookfit.www.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Backend [bootJar]" />
+      <item itemvalue="Gradle.Backend [clean]" />
+      <item itemvalue="HTTP Request.httpRequest | #1" />
+      <item itemvalue="HTTP Request.httpRequest | #3" />
+      <item itemvalue="HTTP Request.httpRequest | GET request with a header#1" />
+      <item itemvalue="Spring Boot.BackendApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.httpRequest | #1" />
+        <item itemvalue="Gradle.Backend [bootJar]" />
+        <item itemvalue="Gradle.Backend [clean]" />
+        <item itemvalue="HTTP Request.httpRequest | GET request with a header#1" />
+        <item itemvalue="HTTP Request.httpRequest | #3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="963c1a03-0ae9-4f87-9d89-3ee4606b6e17" name="Changes" comment="" />
+      <created>1749564445925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749564445925</updated>
+      <workItem from="1749564447035" duration="386000" />
+      <workItem from="1749564838358" duration="999000" />
+      <workItem from="1749566216422" duration="4622000" />
+      <workItem from="1749637831461" duration="26793000" />
+      <workItem from="1750079702589" duration="220000" />
+      <workItem from="1750079980224" duration="14816000" />
+    </task>
+    <task id="LOCAL-00001" summary=":zap: 좌표정보 및 스웨어 구성, postgis 연동 완료">
+      <option name="closed" value="true" />
+      <created>1749568828986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749568828986</updated>
+    </task>
+    <task id="LOCAL-00002" summary=":zap: 좌표정보 및 스웨어 구성, postgis 연동 완료">
+      <option name="closed" value="true" />
+      <created>1749569116039</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749569116039</updated>
+    </task>
+    <task id="LOCAL-00003" summary=":package: 구조 변경">
+      <option name="closed" value="true" />
+      <created>1749982528110</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749982528110</updated>
+    </task>
+    <task id="LOCAL-00004" summary=":package: 구조 변경">
+      <option name="closed" value="true" />
+      <created>1749986553472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749986553472</updated>
+    </task>
+    <task id="LOCAL-00005" summary=":package: 구조 변경">
+      <option name="closed" value="true" />
+      <created>1749987570064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749987570064</updated>
+    </task>
+    <task id="LOCAL-00006" summary=":zap: map/main bffapi 구성, 포트 변경">
+      <option name="closed" value="true" />
+      <created>1749990061144</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749990061144</updated>
+    </task>
+    <task id="LOCAL-00007" summary=":package: .idea 디렉토리 삭제">
+      <option name="closed" value="true" />
+      <created>1749990096319</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749990096319</updated>
+    </task>
+    <task id="LOCAL-00008" summary=":package: .gradle 바이너리 삭제 반영">
+      <option name="closed" value="true" />
+      <created>1749990131643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749990131643</updated>
+    </task>
+    <task id="LOCAL-00009" summary=":package: .build 바이너리 삭제">
+      <option name="closed" value="true" />
+      <created>1749990160819</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749990160819</updated>
+    </task>
+    <task id="LOCAL-00010" summary=":lips: .gitignore 변경">
+      <option name="closed" value="true" />
+      <created>1749990248120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749990248120</updated>
+    </task>
+    <task id="LOCAL-00011" summary=":zap: main 페이지 화면구성 정보 반환 로직">
+      <option name="closed" value="true" />
+      <created>1749995436286</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749995436286</updated>
+    </task>
+    <task id="LOCAL-00012" summary=":fix: import 누락건 반영">
+      <option name="closed" value="true" />
+      <created>1750082390101</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750082390101</updated>
+    </task>
+    <task id="LOCAL-00013" summary=":zap: 상세등록정보 페이지 저장 기능 추가">
+      <option name="closed" value="true" />
+      <created>1750092172121</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750092172121</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="05c00db9-8aa8-422d-b7b1-44f195e695a4" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="05c00db9-8aa8-422d-b7b1-44f195e695a4">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/map-service/develop-kdy" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":zap: 좌표정보 및 스웨어 구성, postgis 연동 완료" />
+    <MESSAGE value=":package: 구조 변경" />
+    <MESSAGE value=":zap: map/main bffapi 구성, 포트 변경" />
+    <MESSAGE value=":package: .idea 디렉토리 삭제" />
+    <MESSAGE value=":package: .gradle 바이너리 삭제 반영" />
+    <MESSAGE value=":package: .build 바이너리 삭제" />
+    <MESSAGE value=":lips: .gitignore 변경" />
+    <MESSAGE value=":zap: main 페이지 화면구성 정보 반환 로직" />
+    <MESSAGE value=":fix: import 누락건 반영" />
+    <MESSAGE value=":zap: 상세등록정보 페이지 저장 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value=":zap: 상세등록정보 페이지 저장 기능 추가" />
+  </component>
+</project>

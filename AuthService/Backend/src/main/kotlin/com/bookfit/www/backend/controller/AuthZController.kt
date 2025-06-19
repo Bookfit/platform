@@ -32,6 +32,7 @@ import java.time.OffsetDateTime
 @RestController
 class AuthZController(
     @Value("\${jwt.key-id}") private val pbKey: String,
+    @Value("\${bookfit-redirect-uri}") private val bookfitRedirectUri: String,
     private val rsaKeyPair: KeyPair,
     private val jwtManager: JwtManager,
     private val kakaoOAuthService: KakaoOAuthService,
@@ -191,7 +192,8 @@ class AuthZController(
                 response.addCookie(refreshTokenCookie)
 
                 response.statusCode = HttpStatus.FOUND
-                response.headers.location = URI.create("http://localhost:9000/api/map") /*메인으로 리다이렉트*/
+//                response.headers.location = URI.create("http://localhost:9000/api/map/bookspace") /*메인으로 리다이렉트*/
+                response.headers.location = URI.create(bookfitRedirectUri) /*메인으로 리다이렉트*/
 
                 response.setComplete()
             }

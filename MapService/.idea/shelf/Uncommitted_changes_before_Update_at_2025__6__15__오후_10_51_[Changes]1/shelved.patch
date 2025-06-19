@@ -1,0 +1,68 @@
+Index: Backend/src/main/java/com/bookfit/www/map/db/entity/Category.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.bookfit.www.map.db.entity;\n\nimport jakarta.persistence.*;\nimport jakarta.validation.constraints.NotNull;\nimport jakarta.validation.constraints.Size;\nimport lombok.Getter;\nimport lombok.Setter;\nimport org.hibernate.annotations.ColumnDefault;\n\n@Getter\n@Setter\n@Entity\n@Table(name = \"category\")\npublic class Category {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    @ColumnDefault(\"nextval('category_id_seq')\")\n    @Column(name = \"category_id\", nullable = false)\n    private Integer id;\n\n    @Size(max = 100)\n    @NotNull\n    @Column(name = \"name\", nullable = false, length = 100)\n    private String name;\n\n    @Size(max = 50)\n    @NotNull\n    @Column(name = \"code\", nullable = false, length = 50)\n    private String code;\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/src/main/java/com/bookfit/www/map/db/entity/Category.java b/Backend/src/main/java/com/bookfit/www/map/db/entity/Category.java
+--- a/Backend/src/main/java/com/bookfit/www/map/db/entity/Category.java	(revision 6e229d4011de9afe01407115a240789278743844)
++++ b/Backend/src/main/java/com/bookfit/www/map/db/entity/Category.java	(date 1749993736427)
+@@ -5,7 +5,6 @@
+ import jakarta.validation.constraints.Size;
+ import lombok.Getter;
+ import lombok.Setter;
+-import org.hibernate.annotations.ColumnDefault;
+ 
+ @Getter
+ @Setter
+@@ -13,8 +12,8 @@
+ @Table(name = "category")
+ public class Category {
+     @Id
+-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+-    @ColumnDefault("nextval('category_id_seq')")
++    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_id_gen")
++    @SequenceGenerator(name = "category_id_gen", sequenceName = "category_id_seq", allocationSize = 1)
+     @Column(name = "category_id", nullable = false)
+     private Integer id;
+ 
+Index: Backend/src/main/java/com/bookfit/www/map/db/entity/Sample.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.bookfit.www.map.db.entity;\n\nimport jakarta.persistence.*;\nimport jakarta.validation.constraints.NotNull;\nimport jakarta.validation.constraints.Size;\nimport lombok.Getter;\nimport lombok.Setter;\nimport org.hibernate.annotations.ColumnDefault;\nimport org.hibernate.annotations.OnDelete;\nimport org.hibernate.annotations.OnDeleteAction;\n\n@Getter\n@Setter\n@Entity\n@Table(name = \"sample\")\npublic class Sample {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    @Column(name = \"sample_id\", nullable = false)\n    private Long id;\n\n    @Size(max = 255)\n    @NotNull\n    @Column(name = \"name\", nullable = false)\n    private String name;\n\n    @Size(max = 20)\n    @NotNull\n    @ColumnDefault(\"'PENDING'\")\n    @Column(name = \"status\", nullable = false, length = 20)\n    private String status;\n\n    @NotNull\n    @ManyToOne(fetch = FetchType.LAZY, optional = false)\n    @OnDelete(action = OnDeleteAction.CASCADE)\n    @JoinColumn(name = \"user_id\", nullable = false)\n    private com.bookfit.www.map.db.entity.User user;\n\n    @Column(name = \"description\", length = Integer.MAX_VALUE)\n    private String description;\n\n    @Size(max = 50)\n    @Column(name = \"weekday_hours\", length = 50)\n    private String weekdayHours;\n    @Size(max = 50)\n    @Column(name = \"weekend_hours\", length = 50)\n    private String weekendHours;\n\n/*\n TODO [Reverse Engineering] create field to map the 'location' column\n Available actions: Define target Java type | Uncomment as is | Remove column mapping\n    @Column(name = \"location\", columnDefinition = \"geometry\")\n    private Object location;\n*/\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/src/main/java/com/bookfit/www/map/db/entity/Sample.java b/Backend/src/main/java/com/bookfit/www/map/db/entity/Sample.java
+--- a/Backend/src/main/java/com/bookfit/www/map/db/entity/Sample.java	(revision 6e229d4011de9afe01407115a240789278743844)
++++ b/Backend/src/main/java/com/bookfit/www/map/db/entity/Sample.java	(date 1749993736416)
+@@ -15,9 +15,8 @@
+ @Table(name = "sample")
+ public class Sample {
+     @Id
+-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name = "sample_id", nullable = false)
+-    private Long id;
++    private Integer id;
+ 
+     @Size(max = 255)
+     @NotNull
+Index: Backend/src/main/java/com/bookfit/www/map/db/entity/SampleCategoryMap.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.bookfit.www.map.db.entity;\n\nimport jakarta.persistence.*;\nimport lombok.Getter;\nimport lombok.Setter;\nimport org.hibernate.annotations.OnDelete;\nimport org.hibernate.annotations.OnDeleteAction;\n\n@Getter\n@Setter\n@Entity\n@Table(name = \"sample_category_map\")\npublic class SampleCategoryMap {\n    @EmbeddedId\n    private SampleCategoryMapId id;\n\n    @MapsId(\"sampleId\")\n    @ManyToOne(fetch = FetchType.LAZY, optional = false)\n    @OnDelete(action = OnDeleteAction.CASCADE)\n    @JoinColumn(name = \"sample_id\", nullable = false)\n    private Sample sample;\n\n    @MapsId(\"categoryId\")\n    @ManyToOne(fetch = FetchType.LAZY, optional = false)\n    @OnDelete(action = OnDeleteAction.CASCADE)\n    @JoinColumn(name = \"category_id\", nullable = false)\n    private Category category;\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/src/main/java/com/bookfit/www/map/db/entity/SampleCategoryMap.java b/Backend/src/main/java/com/bookfit/www/map/db/entity/SampleCategoryMap.java
+--- a/Backend/src/main/java/com/bookfit/www/map/db/entity/SampleCategoryMap.java	(revision 6e229d4011de9afe01407115a240789278743844)
++++ b/Backend/src/main/java/com/bookfit/www/map/db/entity/SampleCategoryMap.java	(date 1749993736425)
+@@ -11,6 +11,7 @@
+ @Entity
+ @Table(name = "sample_category_map")
+ public class SampleCategoryMap {
++    @SequenceGenerator(name = "sample_category_map_id_gen", sequenceName = "sample_facility_id_seq", allocationSize = 1)
+     @EmbeddedId
+     private SampleCategoryMapId id;
+ 

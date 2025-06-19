@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    }
+  ]
+}

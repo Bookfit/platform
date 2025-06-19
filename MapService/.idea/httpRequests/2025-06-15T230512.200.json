@@ -1,0 +1,26 @@
+{
+  "totalCount": 2,
+  "pendingCount": 2,
+  "categories": [
+    {
+      "name": "기타",
+      "code": "OTHER"
+    },
+    {
+      "name": "서점",
+      "code": "BOOKSTORE"
+    },
+    {
+      "name": "북카페",
+      "code": "BOOKCAFE"
+    },
+    {
+      "name": "스터디룸",
+      "code": "STUDYROOM"
+    },
+    {
+      "name": "카페",
+      "code": "CAFE"
+    }
+  ]
+}

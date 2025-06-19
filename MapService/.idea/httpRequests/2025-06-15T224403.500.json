@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-06-15T13:44:03.036+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/map/main"
+}

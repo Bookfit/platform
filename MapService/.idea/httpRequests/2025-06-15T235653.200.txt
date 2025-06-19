@@ -1,0 +1,1 @@
+PostMainRequestDTO(userId=737833749, loginType=kakao, name=장소이름, description=장소에 대한 사용자의 의견을 기입합니다., categories=[MapCategoryVO(code=BOOKSTORE, name=서점), MapCategoryVO(code=STUDY_ROOM, name=스터디룸), MapCategoryVO(code=CAFE, name=카페), MapCategoryVO(code=THEATER, name=공연장)])

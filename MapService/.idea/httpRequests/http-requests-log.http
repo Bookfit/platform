@@ -1,0 +1,1586 @@
+OPTIONS http://kimbaro.iptime.org:9000/api/map/details/meta
+Origin: https://platform-fe-delta.vercel.app
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: Content-Type
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:9020/map/details/meta
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-16T225715.200.json
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 975
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ],
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T225150.200.json
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T225138.400.json
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T225123.400.json
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T225103.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 428
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T224339.400.json
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T224058.400.json
+
+###
+
+POST http://localhost:9020/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+###
+
+POST http://localhost:9020/api/map/details
+Content-Type: application/json
+Content-Length: 974
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "역 1분거리 스터디 룸 카페",
+  "categories": [
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    }
+  ],
+  "address": "서울 동작구 동작대로 129",
+  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
+  "lat": 37.488306,
+  "lon": 126.981925,
+  "weekdayHours": "09:00 - 21:00",
+  "weekendHours": "10:00 - 18:00",
+  "facilities": [
+    {
+      "code": "PARKING",
+      "name": "주차"
+    },
+    {
+      "code": "DRINKS",
+      "name": "음료"
+    },
+    {
+      "code": "POWER_OUTLET",
+      "name": "콘센트"
+    },
+    {
+      "code": "MONITOR",
+      "name": "모니터"
+    },
+    {
+      "code": "WIFI",
+      "name": "와이파이"
+    },
+    {
+      "code": "TOILET",
+      "name": "화장실"
+    }
+  ]
+  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
+}
+
+<> 2025-06-16T223935.404.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 428
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 428
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833748,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+<> 2025-06-16T003939.404.txt
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 428
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833748,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 428
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833748,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 428
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDYROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+<> 2025-06-15T235653.200.txt
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+<> 2025-06-15T233837.200.txt
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 429
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다."
+}
+
+<> 2025-06-15T233601.200.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T233419.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T233304.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T233255.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T232953.200.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T232903.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T232700.400.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T232656.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T232232.500.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T232223.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T232141.400.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T232018.500.json
+
+###
+
+POST http://localhost:9020/map/main
+Content-Type: application/json
+Content-Length: 430
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "userId": 737833749,
+  "loginType": "kakao",
+  "name": "장소이름",
+  "categories": [
+    {
+      "code": "BOOKSTORE",
+      "name": "서점"
+    },
+    {
+      "code": "STUDY_ROOM",
+      "name": "스터디룸"
+    },
+    {
+      "code": "CAFE",
+      "name": "카페"
+    },
+    {
+      "code": "THEATER",
+      "name": "공연장"
+    }
+  ],
+  "description": "장소에 대한 사용자의 의견을 기입합니다.",
+}
+
+<> 2025-06-15T231500.500.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T230512.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T224946.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T224658.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T224506.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T224403.500.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T223610.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T223536.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T222355.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T220524.200.json
+
+###
+
+GET http://localhost:9020/map/main
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-06-15T215933.500.json
+
+###
+

@@ -1,0 +1,217 @@
+Index: Backend/src/main/java/com/bookfit/www/map/dto/details/PostDetailsRequestDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.bookfit.www.map.dto.details;\n\nimport com.bookfit.www.map.dto.search.CategoryVO;\nimport com.bookfit.www.map.dto.search.FacilitiesVO;\nimport io.swagger.v3.oas.annotations.media.Schema;\nimport lombok.Data;\n\nimport java.util.List;\n\n@Data\npublic class PostDetailsRequestDTO {\n\n    @Schema(description = \"사용자 ID\", example = \"737833749\")\n    private String userId;\n\n    @Schema(description = \"로그인 타입\", example = \"kakao\")\n    private String loginType;\n\n    @Schema(description = \"장소명\", example = \"역 1분거리 스터디 룸 카페\")\n    private String name;\n\n    @Schema(description = \"카테고리 목록\", example = \"[{\\\"code\\\":\\\"STUDYROOM\\\",\\\"name\\\":\\\"스터디룸\\\"}]\")\n    private List<CategoryVO> categories;\n\n    @Schema(description = \"주소\", example = \"서울 동작구 동작대로 129\")\n    private String address;\n\n    @Schema(description = \"상세 주소\", example = \"지하1층(사당동, 지하1층) 쌤스터디카페\")\n    private String detailAddress;\n\n    @Schema(description = \"위도\", example = \"37.488306\")\n    private Double lat;\n\n    @Schema(description = \"경도\", example = \"126.981925\")\n    private Double lon;\n\n    @Schema(description = \"평일 운영 시간\", example = \"09:00 - 21:00\")\n    private String weekdayHours;\n\n    @Schema(description = \"주말 운영 시간\", example = \"10:00 - 18:00\")\n    private String weekendHours;\n\n    @Schema(description = \"시설 목록\", example = \"[{\\\"code\\\":\\\"PARKING\\\",\\\"name\\\":\\\"주차\\\"}]\")\n    private List<FacilitiesVO> facilities;\n\n    @Schema(description = \"설명\", example = \"책과 커피를 함께 즐길 수 있는 조용한 공간입니다.\")\n    private String description;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/src/main/java/com/bookfit/www/map/dto/details/PostDetailsRequestDTO.java b/Backend/src/main/java/com/bookfit/www/map/dto/details/PostDetailsRequestDTO.java
+--- a/Backend/src/main/java/com/bookfit/www/map/dto/details/PostDetailsRequestDTO.java	(revision ce1baef4994dc37f181728c5cae10395e036b147)
++++ b/Backend/src/main/java/com/bookfit/www/map/dto/details/PostDetailsRequestDTO.java	(date 1750081815875)
+@@ -1,13 +1,16 @@
+ package com.bookfit.www.map.dto.details;
+ 
++import com.bookfit.www.map.dto.main.MapCategoryVO;
+ import com.bookfit.www.map.dto.search.CategoryVO;
+ import com.bookfit.www.map.dto.search.FacilitiesVO;
+ import io.swagger.v3.oas.annotations.media.Schema;
+ import lombok.Data;
++import lombok.ToString;
+ 
+ import java.util.List;
+ 
+ @Data
++@ToString
+ public class PostDetailsRequestDTO {
+ 
+     @Schema(description = "사용자 ID", example = "737833749")
+@@ -20,7 +23,7 @@
+     private String name;
+ 
+     @Schema(description = "카테고리 목록", example = "[{\"code\":\"STUDYROOM\",\"name\":\"스터디룸\"}]")
+-    private List<CategoryVO> categories;
++    private List<MapCategoryVO> categories;
+ 
+     @Schema(description = "주소", example = "서울 동작구 동작대로 129")
+     private String address;
+@@ -41,7 +44,7 @@
+     private String weekendHours;
+ 
+     @Schema(description = "시설 목록", example = "[{\"code\":\"PARKING\",\"name\":\"주차\"}]")
+-    private List<FacilitiesVO> facilities;
++    private List<FacilitiesCategoryVO> facilities;
+ 
+     @Schema(description = "설명", example = "책과 커피를 함께 즐길 수 있는 조용한 공간입니다.")
+     private String description;
+Index: Backend/src/main/java/com/bookfit/www/map/controller/DetailsController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.bookfit.www.map.controller;\n\nimport com.bookfit.www.map.dto.details.PostDetailsRequestDTO;\nimport com.bookfit.www.map.dto.search.GetSearchSampleRequestDTO;\nimport com.bookfit.www.map.dto.search.GetSearchSampleResponseDTO;\nimport io.swagger.v3.oas.annotations.tags.Tag;\nimport lombok.RequiredArgsConstructor;\nimport lombok.extern.slf4j.Slf4j;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.data.domain.Pageable;\nimport org.springframework.data.domain.Sort;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\nimport java.util.List;\n\n@RestController\n@RequestMapping(\"/map/details\")\n@Tag(name = \"/map/details\", description = \"상세정보 페이지\")\n@RequiredArgsConstructor\n@Slf4j\npublic class DetailsController {\n\n    @GetMapping(\"\")\n    public ResponseEntity<Void> getDetails() {\n\n        return ResponseEntity.ok().build();\n    }\n\n    @PostMapping(\"\")\n    public ResponseEntity<PostDetailsRequestDTO> saveDetails(@ModelAttribute PostDetailsRequestDTO request) {\n\n        return ResponseEntity.ok().build();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/src/main/java/com/bookfit/www/map/controller/DetailsController.java b/Backend/src/main/java/com/bookfit/www/map/controller/DetailsController.java
+--- a/Backend/src/main/java/com/bookfit/www/map/controller/DetailsController.java	(revision ce1baef4994dc37f181728c5cae10395e036b147)
++++ b/Backend/src/main/java/com/bookfit/www/map/controller/DetailsController.java	(date 1750082261476)
+@@ -3,6 +3,7 @@
+ import com.bookfit.www.map.dto.details.PostDetailsRequestDTO;
+ import com.bookfit.www.map.dto.search.GetSearchSampleRequestDTO;
+ import com.bookfit.www.map.dto.search.GetSearchSampleResponseDTO;
++import io.swagger.v3.oas.annotations.Operation;
+ import io.swagger.v3.oas.annotations.tags.Tag;
+ import lombok.RequiredArgsConstructor;
+ import lombok.extern.slf4j.Slf4j;
+@@ -12,7 +13,9 @@
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.*;
+ 
++import java.util.HashMap;
+ import java.util.List;
++import java.util.Map;
+ 
+ @RestController
+ @RequestMapping("/map/details")
+@@ -27,9 +30,34 @@
+         return ResponseEntity.ok().build();
+     }
+ 
+-    @PostMapping("")
+-    public ResponseEntity<PostDetailsRequestDTO> saveDetails(@ModelAttribute PostDetailsRequestDTO request) {
++    @PostMapping()
++    public ResponseEntity<PostDetailsRequestDTO> saveDetails(@RequestBody PostDetailsRequestDTO request) {
++
++        return ResponseEntity.ok(request);
++    }
++
++    @GetMapping("/meta")
++    @Operation(summary = "화면 구성 정보 요청", description = "화면 표현을 위한 정보를 반환 합니다.")
++    public ResponseEntity<Map<String, Object>> getMockMetaData() {
++        List<Map<String, String>> categories = List.of(
++                Map.of("code", "BOOKSTORE", "name", "서점"),
++                Map.of("code", "STUDY_ROOM", "name", "스터디룸"),
++                Map.of("code", "CAFE", "name", "카페"),
++                Map.of("code", "THEATER", "name", "공연장")
++        );
++
++        List<Map<String, String>> facilities = List.of(
++                Map.of("code", "PARKING", "name", "주차"),
++                Map.of("code", "DRINKS", "name", "음료"),
++                Map.of("code", "POWER_OUTLET", "name", "콘센트"),
++                Map.of("code", "MONITOR", "name", "모니터")
++        );
+ 
+-        return ResponseEntity.ok().build();
++        Map<String, Object> response = new HashMap<>();
++        response.put("categories", categories);
++        response.put("facilities", facilities);
++
++        return ResponseEntity.ok(response);
+     }
++
+ }
+Index: Backend/src/test/httpRequest.http
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>### GET request with a header\nGET http://localhost:9020/map/main\nAccept: application/json\n\n###\nPOST http://localhost:9020/map/main\nContent-Type: application/json\n\n{\n  \"userId\": 737833749,\n  \"loginType\": \"kakao\",\n  \"name\": \"장소이름\",\n  \"categories\": [\n    {\n      \"code\": \"BOOKSTORE\",\n      \"name\": \"서점\"\n    },\n    {\n      \"code\": \"STUDYROOM\",\n      \"name\": \"스터디룸\"\n    },\n    {\n      \"code\": \"CAFE\",\n      \"name\": \"카페\"\n    },\n    {\n      \"code\": \"THEATER\",\n      \"name\": \"공연장\"\n    }\n  ],\n  \"description\": \"장소에 대한 사용자의 의견을 기입합니다.\"\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Backend/src/test/httpRequest.http b/Backend/src/test/httpRequest.http
+--- a/Backend/src/test/httpRequest.http	(revision ce1baef4994dc37f181728c5cae10395e036b147)
++++ b/Backend/src/test/httpRequest.http	(date 1750082235014)
+@@ -1,3 +1,61 @@
++
++### GET request with a header
++GET http://localhost:9020/map/details/meta
++Accept: application/json
++
++###
++POST http://localhost:9020/map/details
++Content-Type: application/json
++
++{
++  "userId": 737833749,
++  "loginType": "kakao",
++  "name": "역 1분거리 스터디 룸 카페",
++  "categories": [
++    {
++      "code": "STUDYROOM",
++      "name": "스터디룸"
++    },
++    {
++      "code": "CAFE",
++      "name": "카페"
++    }
++  ],
++  "address": "서울 동작구 동작대로 129",
++  "detailAddress": "지하1층(사당동, 지하1층) 쌤스터디카페",
++  "lat": 37.488306,
++  "lon": 126.981925,
++  "weekdayHours": "09:00 - 21:00",
++  "weekendHours": "10:00 - 18:00",
++  "facilities": [
++    {
++      "code": "PARKING",
++      "name": "주차"
++    },
++    {
++      "code": "DRINKS",
++      "name": "음료"
++    },
++    {
++      "code": "POWER_OUTLET",
++      "name": "콘센트"
++    },
++    {
++      "code": "MONITOR",
++      "name": "모니터"
++    },
++    {
++      "code": "WIFI",
++      "name": "와이파이"
++    },
++    {
++      "code": "TOILET",
++      "name": "화장실"
++    }
++  ],
++  "description": "책과 커피를 함께 즐길 수 있는 조용한 공간입니다."
++}
++
+ ### GET request with a header
+ GET http://localhost:9020/map/main
+ Accept: application/json
+Index: ../AuthService/Backend/build/resources/main/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.application.name=backend\njwt.jwk-set-uri=http://localhost:9010/.well-known/jwks.json\njwt.issuer-uri=https://www.bookfit.com\njwt.key-id=boofit-key-id\njwt.pub-path=APP/sms/src_temp/GIPHTTP/keys/public.pem\njwt.prb-path=APP/sms/src_temp/GIPHTTP/keys/private.pem\nspring.main.allow-bean-definition-overriding=true\nserver.port=9010\nkakao.client-id=5b0433ec9822a577927b5e94d30ba034\nkakao-redirect-uri=http://localhost:9000/api/oauth/kakao/callback\n# ?????? ??\nspring.datasource.url=jdbc:postgresql://kimbaro.iptime.org:5432/\nspring.datasource.username=bookfit\nspring.datasource.password=1234\nspring.datasource.driver-class-name=org.postgresql.Driver\n# JPA ??\nspring.jpa.hibernate.ddl-auto=validate\nspring.jpa.show-sql=false\nspring.jpa.properties.hibernate.format_sql=true\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect\n# ??? ?? (??)\nspring.jackson.time-zone=Asia/Seoul
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/../AuthService/Backend/build/resources/main/application.properties b/../AuthService/Backend/build/resources/main/application.properties
+--- a/../AuthService/Backend/build/resources/main/application.properties	(revision ce1baef4994dc37f181728c5cae10395e036b147)
++++ b/../AuthService/Backend/build/resources/main/application.properties	(date 1750080530129)
+@@ -9,7 +9,7 @@
+ kakao.client-id=5b0433ec9822a577927b5e94d30ba034
+ kakao-redirect-uri=http://localhost:9000/api/oauth/kakao/callback
+ # ?????? ??
+-spring.datasource.url=jdbc:postgresql://kimbaro.iptime.org:5432/
++spring.datasource.url=jdbc:postgresql://kimbaro.iptime.org:5432/bookfit
+ spring.datasource.username=bookfit
+ spring.datasource.password=1234
+ spring.datasource.driver-class-name=org.postgresql.Driver
+Index: ../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>21\n0
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab b/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab
+--- a/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab	(revision ce1baef4994dc37f181728c5cae10395e036b147)
++++ b/../AuthService/Backend/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab	(date 1750080643958)
+@@ -1,2 +1,2 @@
+-21
++19
+ 0
+\ No newline at end of file

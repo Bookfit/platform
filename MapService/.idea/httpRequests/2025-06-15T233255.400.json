@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-06-15T14:32:55.615+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/map/main"
+}

@@ -9,9 +9,10 @@
     <script>
         const BASE_URL = 'https://kauth.kakao.com/oauth/authorize';
         const CLIENT_ID = '5b0433ec9822a577927b5e94d30ba034';
-        const REDIRECT_URI = 'http://localhost:9000/api/oauth/kakao/callback'
+        // const REDIRECT_URI = 'http://localhost:9000/api/oauth/kakao/callback'
+        const REDIRECT_URI = 'http://kimbaro.iptime.org:9000/api/oauth/kakao/callback'
 
-        const REQUEST_URL = `${BASE_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`
+        const REQUEST_URL = `${BASE_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&prompt=login`
         console.log(REQUEST_URL)
     </script>
     <script>
@@ -128,7 +129,7 @@
 <body>
 <div class="login-container">
     <div class="logo-and-title">
-        <img src="http://localhost:9010/images/logo.jpeg" alt="logo"/>
+        <img src="https://img.kr.gcp-karroter.net/community/community/20250407/0a837ab7-4be7-4998-9a62-803aea436be7.png" alt="logo"/>
         <h1>환영합니다</h1>
     </div>
 
