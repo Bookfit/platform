@@ -2,15 +2,13 @@ package com.bookfit.www.board.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "comment")
-public class Comment extends AuditableBaseEntity {
+public class Comment extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long commentId;
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;

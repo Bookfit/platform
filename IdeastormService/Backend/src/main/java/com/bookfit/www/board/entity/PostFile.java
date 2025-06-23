@@ -4,11 +4,11 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "post_file")
-public class PostFile extends AuditableBaseEntity {
+public class PostFile extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long postFileId;
 
     private String fileName;
     private String fileUrl;
